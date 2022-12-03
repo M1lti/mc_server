@@ -1,0 +1,48 @@
+[20:55:21] [ServerMain/INFO]: Building unoptimized datafixer
+[20:55:23] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[20:55:25] [ServerMain/INFO]: Loaded 7 recipes
+[20:55:27] [Server thread/INFO]: Starting minecraft server version 1.19.2
+[20:55:27] [Server thread/INFO]: Loading properties
+[20:55:27] [Server thread/INFO]: This server is running Paper version git-Paper-271 (MC: 1.19.2) (Implementing API version 1.19.2-R0.1-SNAPSHOT) (Git: 2151112)
+[20:55:27] [Server thread/ERROR]: Encountered an unexpected exception
+java.lang.OutOfMemoryError: unable to create native thread: possibly out of memory or process/resource limits reached
+	at java.lang.Thread.start0(Native Method) ~[?:?]
+	at java.lang.Thread.start(Thread.java:802) ~[?:?]
+	at sun.java2d.Disposer.lambda$static$0(Disposer.java:92) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at sun.java2d.Disposer.<clinit>(Disposer.java:85) ~[?:?]
+	at javax.imageio.stream.FileImageInputStream.<init>(FileImageInputStream.java:98) ~[?:?]
+	at javax.imageio.stream.FileImageInputStream.<init>(FileImageInputStream.java:73) ~[?:?]
+	at com.sun.imageio.spi.FileImageInputStreamSpi.createInputStreamInstance(FileImageInputStreamSpi.java:55) ~[?:?]
+	at javax.imageio.ImageIO.createImageInputStream(ImageIO.java:359) ~[?:?]
+	at javax.imageio.ImageIO.read(ImageIO.java:1313) ~[?:?]
+	at org.bukkit.craftbukkit.v1_19_R1.CraftServer.loadServerIcon0(CraftServer.java:2314) ~[paper-1.19.2.jar:git-Paper-271]
+	at org.bukkit.craftbukkit.v1_19_R1.CraftServer.loadIcon(CraftServer.java:1069) ~[paper-1.19.2.jar:git-Paper-271]
+	at org.bukkit.craftbukkit.v1_19_R1.CraftServer.<init>(CraftServer.java:368) ~[paper-1.19.2.jar:git-Paper-271]
+	at net.minecraft.server.players.PlayerList.<init>(PlayerList.java:163) ~[paper-1.19.2.jar:git-Paper-271]
+	at net.minecraft.server.dedicated.DedicatedPlayerList.<init>(DedicatedPlayerList.java:15) ~[paper-1.19.2.jar:git-Paper-271]
+	at net.minecraft.server.dedicated.DedicatedServer.initServer(DedicatedServer.java:208) ~[paper-1.19.2.jar:git-Paper-271]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1100) ~[paper-1.19.2.jar:git-Paper-271]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:305) ~[paper-1.19.2.jar:git-Paper-271]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+[20:55:27] [Server thread/WARN]: Failed to get system info for World Generation
+java.lang.NullPointerException: Cannot invoke "net.minecraft.world.level.storage.SaveData.B()" because "this.m" is null
+	at net.minecraft.server.MinecraftServer.lambda$fillSystemReport$13(MinecraftServer.java:1692) ~[paper-1.19.2.jar:git-Paper-271]
+	at net.minecraft.SystemReport.setDetail(SystemReport.java:62) ~[paper-1.19.2.jar:git-Paper-271]
+	at net.minecraft.server.MinecraftServer.fillSystemReport(MinecraftServer.java:1691) ~[paper-1.19.2.jar:git-Paper-271]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1199) ~[paper-1.19.2.jar:git-Paper-271]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:305) ~[paper-1.19.2.jar:git-Paper-271]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+[20:55:27] [Server thread/ERROR]: This crash report has been saved to: /home/minecraft/./crash-reports/crash-2022-12-03_20.55.27-server.txt
+[20:55:27] [Server thread/INFO]: Stopping server
+[20:55:27] [Server thread/INFO]: Saving worlds
+[20:55:27] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[20:55:27] [Server thread/INFO]: Flushing Chunk IO
+[20:55:27] [Server thread/ERROR]: Exception stopping the server
+java.lang.NullPointerException: Cannot read the array length because "io.papermc.paper.chunk.system.io.RegionFileIOThread.threads" is null
+	at io.papermc.paper.chunk.system.io.RegionFileIOThread.close(RegionFileIOThread.java:189) ~[paper-1.19.2.jar:git-Paper-271]
+	at net.minecraft.server.MinecraftServer.stopServer(MinecraftServer.java:992) ~[paper-1.19.2.jar:git-Paper-271]
+	at net.minecraft.server.dedicated.DedicatedServer.stopServer(DedicatedServer.java:808) ~[paper-1.19.2.jar:git-Paper-271]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1212) ~[paper-1.19.2.jar:git-Paper-271]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:305) ~[paper-1.19.2.jar:git-Paper-271]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]

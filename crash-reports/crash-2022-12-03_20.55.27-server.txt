@@ -1,0 +1,79 @@
+---- Minecraft Crash Report ----
+// My bad.
+
+Time: 2022-12-03 20:55:27
+Description: Exception in server tick loop
+
+java.lang.OutOfMemoryError: unable to create native thread: possibly out of memory or process/resource limits reached
+	at java.base/java.lang.Thread.start0(Native Method)
+	at java.base/java.lang.Thread.start(Thread.java:802)
+	at java.desktop/sun.java2d.Disposer.lambda$static$0(Disposer.java:92)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
+	at java.desktop/sun.java2d.Disposer.<clinit>(Disposer.java:85)
+	at java.desktop/javax.imageio.stream.FileImageInputStream.<init>(FileImageInputStream.java:98)
+	at java.desktop/javax.imageio.stream.FileImageInputStream.<init>(FileImageInputStream.java:73)
+	at java.desktop/com.sun.imageio.spi.FileImageInputStreamSpi.createInputStreamInstance(FileImageInputStreamSpi.java:55)
+	at java.desktop/javax.imageio.ImageIO.createImageInputStream(ImageIO.java:359)
+	at java.desktop/javax.imageio.ImageIO.read(ImageIO.java:1313)
+	at org.bukkit.craftbukkit.v1_19_R1.CraftServer.loadServerIcon0(CraftServer.java:2314)
+	at org.bukkit.craftbukkit.v1_19_R1.CraftServer.loadIcon(CraftServer.java:1069)
+	at org.bukkit.craftbukkit.v1_19_R1.CraftServer.<init>(CraftServer.java:368)
+	at net.minecraft.server.players.PlayerList.<init>(PlayerList.java:163)
+	at net.minecraft.server.dedicated.DedicatedPlayerList.<init>(DedicatedPlayerList.java:15)
+	at net.minecraft.server.dedicated.DedicatedServer.initServer(DedicatedServer.java:208)
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1100)
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:305)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19.2
+	Minecraft Version ID: 1.19.2
+	Operating System: Linux (amd64) version 4.15.0
+	Java Version: 17.0.5, Private Build
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Private Build
+	Memory: 6273520160 bytes (5982 MiB) / 6442450944 bytes (6144 MiB) up to 7516192768 bytes (7168 MiB)
+	CPUs: 6
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
+	Identifier: Intel64 Family 6 Model 63 Stepping 2
+	Microarchitecture: Haswell (Server)
+	Frequency (GHz): 2.50
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 6
+	Graphics card #0 name: unknown
+	Graphics card #0 vendor: unknown
+	Graphics card #0 VRAM (MB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MB): 0.00
+	Virtual memory used (MB): 2993.44
+	Swap memory total (MB): 0.00
+	Swap memory used (MB): 0.00
+	JVM Flags: 2 total; -Xms6G -Xmx7G
+	CraftBukkit Information: 
+   Running: Paper version git-Paper-271 (MC: 1.19.2) (Implementing API version 1.19.2-R0.1-SNAPSHOT) true
+   Plugins: {}
+   Warnings: DEFAULT
+   Reload Count: 
+   Failed to handle CraftCrashReport:
+java.lang.NullPointerException: Cannot read field "reloadCount" because "net.minecraft.server.MinecraftServer.getServer().server" is null
+	at org.bukkit.craftbukkit.v1_19_R1.CraftCrashReport.get(CraftCrashReport.java:31)
+	at org.bukkit.craftbukkit.v1_19_R1.CraftCrashReport.get(CraftCrashReport.java:17)
+	at net.minecraft.SystemReport.a(SystemReport.java:62)
+	at net.minecraft.CrashReport.<init>(CrashReport.java:38)
+	at net.minecraft.server.MinecraftServer.a(MinecraftServer.java:1253)
+	at net.minecraft.server.MinecraftServer.v(MinecraftServer.java:1197)
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:305)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+	Server Running: true
+	Data Packs: vanilla, file/bukkit (incompatible)
+	World Generation: ERR
+	Is Modded: Definitely; Server brand changed to 'Paper'
+	Type: Dedicated Server (map_server.txt)
