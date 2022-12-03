@@ -1,5 +1,0 @@
-# HSTS 1.0 Known Hosts database for GNU Wget.
-# Edit at your own risk.
-# <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
-api.papermc.io	0	1	1668787660	15552000
-papermc.io	0	1	1650581588	15552000
